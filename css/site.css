@@ -787,8 +787,12 @@ header .container .btn-mobile {
 #account-details .container form h5 {
   color: #6366F1;
 }
-#account-details .container form label {
-  color: #0B0F19;
+#account-details .container form .address::before {
+  content: "";
+  display: block;
+  height: 0.3px;
+  background-color: #E2E5F1;
+  margin-bottom: 40px;
 }
 #account-details .container form .submit-buttons {
   display: flex;

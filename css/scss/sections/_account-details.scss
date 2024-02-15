@@ -54,8 +54,12 @@
                 
             }
 
-            label {
-                color: $gray-900;
+            .address::before {
+                content: '';
+                display: block;
+                height: 0.3px;
+                background-color: $gray-300;
+                margin-bottom: 40px;
             }
 
             .submit-buttons {
