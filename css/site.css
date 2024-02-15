@@ -744,6 +744,58 @@ header .container .btn-mobile {
   border-radius: 10px;
 }
 
+@media (min-width: 992px) {
+  #account-details .container {
+    display: flex;
+    gap: 10rem;
+  }
+}
+#account-details .container .main-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
+}
+@media (min-width: 992px) {
+  #account-details .container .main-info {
+    min-width: 200px;
+  }
+}
+#account-details .container .main-info .images {
+  position: relative;
+}
+#account-details .container .main-info .images .refresh-icon {
+  position: absolute;
+  top: 65%;
+  left: 60%;
+}
+#account-details .container .main-info .images .profile-img {
+  z-index: 1;
+}
+#account-details .container .main-info .images .refresh-icon {
+  z-index: 2;
+}
+#account-details .container .main-info .buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+#account-details .container .main-info .buttons .btn {
+  display: flex;
+  justify-content: stretch;
+}
+#account-details .container form h5 {
+  color: #6366F1;
+}
+#account-details .container form label {
+  color: #0B0F19;
+}
+#account-details .container form .submit-buttons {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem;
+}
+
 footer {
   padding: 50px 0 30px 0;
   line-height: 160%;

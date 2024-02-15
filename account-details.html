@@ -12,60 +12,75 @@
 </head>
 
 <body>
+    <section id="account-details">
+        <div class="container mt-5">
 
-    <div class="container mt-5">
-
-        <form class="row g-3 justify-content-md-center">
-            <div class="col-md-6">
-                <label for="InputFirstName" class="form-label fw-semibold">First name</label>
-                <input type="text" class="form-control" id="firstName" placeholder="First name placeholder">
-            </div>
-            <div class="col-md-6">
-                <label for="InputLastName" class="form-label fw-semibold">Last name</label>
-                <input type="text" class="form-control" id="lastName" placeholder="Last name placeholder">
-            </div>
-            <div class="col-md-6">
-                <label for="InputEmail" class="form-label fw-semibold">Email address</label>
-                <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp">
-            </div>
-            <div class="col-md-6">
-                <label for="InputPhoneNumber" class="form-label fw-semibold">Phone</label>
-                <input type="text" class="form-control" id="phoneNumber" placeholder="Phone number placeholder">
-            </div>
-            <div class="col-md-12">
-                <span class="input-bio fw-semibold">Bio (optional)</span>
-                <textarea class="form-control" name="" id="" cols="30" rows="10"></textarea>
-            </div>
-            <div class="col-12">
-                <button type="submit" class="btn btn-gray">Cancel</button>
-                <button type="submit" class="btn btn-theme">Save changes</button>
+            <div class="main-info">
+                <div class="images">
+                    <img class="profile-img" src="images/profile-picture.svg" alt="">
+                    <img class="refresh-icon" src="images/icons/refresh-icon.svg" alt="">
+                </div>
+                <h5>John Doe</h5>
+                <p>john.doe@domain.com</p>
+                <div class="buttons">
+                    <button type="submit" class="btn btn-theme"><i class="fa-solid fa-gear"></i>Account details</button>
+                    <button type="submit" class="btn btn-gray fw-semibold"><i
+                            class="fa-solid fa-arrow-right-from-bracket fa-flip-horizontal"></i>Sign out</button>
+                </div>
             </div>
 
+            <form class="row g-3 justify-content-md-center">
+                <h2>Account Details</h2>
+                <h5>Basic Info</h5>
+                <div class="col-md-6">
+                    <label for="InputFirstName" class="form-label fw-semibold">First name</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="">
+                </div>
+                <div class="col-md-6">
+                    <label for="InputLastName" class="form-label fw-semibold">Last name</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="">
+                </div>
+                <div class="col-md-6">
+                    <label for="InputEmail" class="form-label fw-semibold">Email address</label>
+                    <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp">
+                </div>
+                <div class="col-md-6">
+                    <label for="InputPhoneNumber" class="form-label fw-semibold">Phone</label>
+                    <input type="text" class="form-control" id="phoneNumber" placeholder="Enter your phone">
+                </div>
+                <div class="col-md-12">
+                    <span class="input-bio fw-semibold">Bio (optional)</span>
+                    <textarea class="form-control" placeholder="Add a short bio.." name="" id="" cols="30"
+                        rows="10"></textarea>
+                </div>
+                <div class="col-12 submit-buttons">
+                    <button type="submit" class="btn btn-gray fw-semibold">Cancel</button>
+                    <button type="submit" class="btn btn-theme">Save changes</button>
+                </div>
+                <h5>Address</h5>
+                <div class="col-md-12">
+                    <label for="inputAddress" class="form-label fw-semibold">Address line 1</label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                </div>
+                <div class="col-md-12">
+                    <label for="inputAddress2" class="form-label fw-semibold">Address line 2</label>
+                    <input type="text" class="form-control" id="inputAddress2"
+                        placeholder="Apartment, studio, or floor">
+                </div>
+                <div class="col-md-6">
+                    <label for="inputPostalCode" class="form-label fw-semibold">Postal code</label>
+                    <input type="text" class="form-control" id="inputPostalCode" placeholder="Enter your postal code">
+                </div>
+                <div class="col-md-6">
+                    <label for="inputCity" class="form-label fw-semibold">City</label>
+                    <input type="text" class="form-control" id="inputCity" placeholder="Enter your city">
+                </div>
+                <div class="col-12 submit-buttons">
+                    <button type="submit" class="btn btn-gray fw-semibold">Cancel</button>
+                    <button type="submit" class="btn btn-theme">Save changes</button>
+                </div>
+            </form>
 
-            <div class="col-md-12">
-                <label for="inputAddress" class="form-label fw-semibold">Address line 1</label>
-                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-            </div>
-            <div class="col-md-12">
-                <label for="inputAddress2" class="form-label fw-semibold">Address line 2</label>
-                <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-            </div>
-            <div class="col-md-6">
-                <label for="inputPostalCode" class="form-label fw-semibold">Postal code</label>
-                <input type="text" class="form-control" id="inputPostalCode">
-            </div>
-            <div class="col-md-6">
-                <label for="inputCity" class="form-label fw-semibold">City</label>
-                <input type="text" class="form-control" id="inputCity">
-            </div>
-
-            <div class="col-12">
-                <button type="submit" class="btn btn-gray">Cancel</button>
-                <button type="submit" class="btn btn-theme">Save changes</button>
-            </div>
-
-        </form>
-
-    </div>
-
+        </div>
+    </section>
 </body>
