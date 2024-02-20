@@ -12,7 +12,7 @@
 
         img {
             position: absolute;
-            right: 31%;
+            right: 10%;
             top: 25%;
 
             @include lg {
@@ -27,13 +27,17 @@
             display: grid;
             flex-grow: 1;
             align-items: center;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             padding-top: 40px;
             padding-bottom: 40px;
             gap: 10px;
 
+            @include lg {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
             h5 {
-                grid-area: 1/1/1/5;
+                grid-area: 1/1/1/3;
 
                 @include lg {
                     grid-area: 1/1/3/2;
@@ -47,13 +51,20 @@
 
         .subscribe-here {
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 20px;
+            margin-bottom: 20;
+
+            @include lg {
+                display: flex;
+                flex-direction: row;
+            }
 
             input {
                 flex: 1;
-                margin-right: 10px;
+
+                margin-bottom: 0px;
 
                 border: 1px solid $gray-500;
                 color: $gray-500;
@@ -61,6 +72,10 @@
                 font-weight: 600;
                 font-size: 16px;
                 border-radius: 10px;
+
+                @include lg {
+                    margin-right: 10px;
+                }
                 
             }
         }
