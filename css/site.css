@@ -364,6 +364,101 @@ a:hover {
   color: #FFFFFF;
 }
 
+form {
+  width: 100%;
+  display: grid;
+}
+form .input-group {
+  display: grid;
+}
+form .checkbox span {
+  display: block;
+}
+form .checkbox span.field-validation-error {
+  position: static;
+  top: 0;
+  right: 0;
+  line-height: 160%;
+  font-weight: 400;
+  color: #565973;
+  font-family: "Manrope", sans-serif;
+  font-size: 14px !important;
+  color: #EF4444;
+}
+form .checkbox-group {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+}
+form .checkbox-group input[type=checkbox] {
+  height: 1.2rem;
+  width: 1.2rem;
+  border: 0.063rem solid red;
+}
+form .checkbox-group label {
+  margin: 0;
+  font-weight: 400;
+}
+form label {
+  margin-bottom: 0.188rem;
+  font-weight: 700;
+}
+form input {
+  padding: 1rem;
+  border-radius: 0.5rem !important;
+  border: 0.036rem solid #D4D7E5;
+}
+form input::-moz-placeholder {
+  opacity: 0.4;
+}
+form input::placeholder {
+  opacity: 0.4;
+}
+form input.input-validation-error {
+  border: 0.036rem solid #EF4444 !important;
+  color: #EF4444;
+}
+form input.input-validation-error::-moz-placeholder {
+  color: #EF4444;
+}
+form input.input-validation-error::placeholder {
+  color: #EF4444;
+}
+form textarea {
+  padding: 1rem;
+  border-radius: 0.5rem !important;
+  border: 0.063rem solid #D4D7E5;
+  resize: none;
+}
+form textarea::-moz-placeholder {
+  opacity: 0.4;
+}
+form textarea::placeholder {
+  opacity: 0.4;
+}
+form textarea.input-validation-error {
+  border: 0.063rem solid #EF4444 !important;
+  color: #EF4444;
+}
+form textarea.input-validation-error::-moz-placeholder {
+  color: #EF4444;
+}
+form textarea.input-validation-error::placeholder {
+  color: #EF4444;
+}
+form span.field-validation-error {
+  position: static;
+  top: 0;
+  right: 0;
+  line-height: 160%;
+  font-weight: 400;
+  color: #565973;
+  font-family: "Manrope", sans-serif;
+  font-size: 14px !important;
+  color: #EF4444;
+}
+
 header {
   padding: 15px 0;
 }
@@ -958,60 +1053,138 @@ header .container .btn-mobile {
   }
 }
 
-@media (min-width: 992px) {
-  #account-details .container {
-    display: flex;
-    gap: 10rem;
-  }
-}
-#account-details .container .main-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 60px;
+#account-details {
+  display: block;
+  gap: 150px;
+  margin-bottom: 70px;
 }
 @media (min-width: 992px) {
-  #account-details .container .main-info {
-    min-width: 200px;
+  #account-details {
+    display: grid;
+    grid-template-columns: 2fr 5fr;
   }
 }
-#account-details .container .main-info .images {
-  position: relative;
+#account-details aside {
+  border-right: 1px solid #E2E5F1;
+  padding-right: 20px;
 }
-#account-details .container .main-info .images .refresh-icon {
-  position: absolute;
-  top: 65%;
-  left: 60%;
+#account-details aside .profile-info {
+  margin: 20px;
+  text-align: center;
 }
-#account-details .container .main-info .images .profile-img {
-  z-index: 1;
+#account-details aside .profile-info h5 {
+  margin-top: 15px;
+  margin-bottom: 0px;
 }
-#account-details .container .main-info .images .refresh-icon {
-  z-index: 2;
+#account-details aside .profile-info p {
+  line-height: 160%;
+  font-weight: 400;
+  color: #565973;
+  font-family: "Manrope", sans-serif;
+  font-size: 14px !important;
 }
-#account-details .container .main-info .buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+#account-details aside nav {
+  margin-top: 50px;
+  text-align: left;
 }
-#account-details .container .main-info .buttons .btn {
-  display: flex;
-  justify-content: stretch;
+#account-details aside nav a {
+  margin: 10px 0;
+  text-align: left;
+  justify-content: flex-start;
 }
-#account-details .container form h5 {
+#account-details aside nav .btn-theme-s {
+  text-align: left;
+  justify-content: flex-start;
+}
+#account-details .details {
+  margin-top: 50px;
+  width: 100%;
+}
+#account-details .details .basic-info form {
+  padding: 1rem;
+}
+#account-details .details .basic-info form h5 {
   color: #6366F1;
 }
-#account-details .container form .address::before {
-  content: "";
-  display: block;
-  height: 0.3px;
-  background-color: #E2E5F1;
-  margin-bottom: 40px;
+#account-details .details .basic-info form .content {
+  display: grid;
+  gap: 1rem 2rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "firstname firstname" "lastname lastname" "email email" "phone phone" "bio bio" "buttons buttons";
 }
-#account-details .container form .submit-buttons {
+#account-details .details .basic-info form .content #form-firstname {
+  grid-area: firstname;
+}
+#account-details .details .basic-info form .content #form-lastname {
+  grid-area: lastname;
+}
+#account-details .details .basic-info form .content #form-email {
+  grid-area: email;
+}
+#account-details .details .basic-info form .content #form-phone {
+  grid-area: phone;
+}
+#account-details .details .basic-info form .content #form-bio {
+  grid-area: bio;
+}
+#account-details .details .basic-info form .content #form-bio span {
+  color: #B4B7C9;
+  font-weight: 400;
+}
+#account-details .details .basic-info form .content #form-buttons {
+  grid-area: buttons;
+  margin: 20px 0;
   display: flex;
-  gap: 1rem;
-  margin: 2rem;
+  gap: 20px;
+}
+@media (min-width: 992px) {
+  #account-details .details .basic-info form .content {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "firstname lastname" "email phone" "bio bio" "buttons buttons";
+  }
+}
+#account-details .details .address-info {
+  margin-top: 30px;
+}
+#account-details .details .address-info form {
+  padding: 1rem;
+}
+#account-details .details .address-info form h5 {
+  color: #6366F1;
+}
+#account-details .details .address-info form .content {
+  display: grid;
+  gap: 1rem 2rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "addressline_1 addressline_1" "addressline_2 addressline_2" "postalcode postalcode" "city city" "buttons buttons";
+}
+#account-details .details .address-info form .content #form-addressline-1 {
+  grid-area: addressline_1;
+}
+#account-details .details .address-info form .content #form-addressline-2 {
+  grid-area: addressline_2;
+}
+#account-details .details .address-info form .content #form-addressline-2 span {
+  color: #B4B7C9;
+  font-weight: 400;
+}
+#account-details .details .address-info form .content #form-postalcode {
+  grid-area: postalcode;
+}
+#account-details .details .address-info form .content #form-city {
+  grid-area: city;
+}
+#account-details .details .address-info form .content #form-buttons {
+  grid-area: buttons;
+  margin: 20px 0;
+  display: flex;
+  gap: 20px;
+}
+@media (min-width: 992px) {
+  #account-details .details .address-info form .content {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "addressline_1 addressline_1" "addressline_2 addressline_2" "postalcode city" "buttons buttons";
+  }
 }
 
 footer {
