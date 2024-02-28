@@ -1439,6 +1439,55 @@ header .container .btn-mobile {
   padding-left: 30px;
 }
 
+#creator-presentation {
+  margin-top: 80px;
+  margin-bottom: 40px;
+}
+#creator-presentation .container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+@media (min-width: 992px) {
+  #creator-presentation .container {
+    width: 50%;
+  }
+}
+@media (min-width: 1200px) {
+  #creator-presentation .container {
+    flex-direction: row;
+    width: 100%;
+  }
+}
+#creator-presentation .container .creator-text {
+  padding: 10px;
+  background-color: #0B0F19;
+}
+@media (min-width: 992px) {
+  #creator-presentation .container .creator-text {
+    padding: 80px;
+  }
+}
+#creator-presentation .container .creator-text h1 {
+  color: #FFFFFF;
+}
+#creator-presentation .container .creator-text p {
+  color: #9397AD;
+}
+#creator-presentation .container .creator-text .media-buttons .btn {
+  padding: 8px 25px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+#creator-presentation .container .creator-text .media-buttons .btn-info {
+  color: #FFFFFF;
+  background-color: rgb(60, 120, 233);
+  border: rgb(60, 120, 233);
+}
+#creator-presentation .container .creator-text .media-buttons i {
+  padding-right: 8px;
+}
+
 #not-found .container {
   display: flex;
   flex-direction: column;
