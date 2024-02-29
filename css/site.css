@@ -1619,24 +1619,43 @@ header .container .btn-mobile {
 }
 #contact .container .contact-section {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+}
+@media (min-width: 992px) {
+  #contact .container .contact-section {
+    display: flex;
+    flex-direction: row;
+  }
 }
 #contact .container .contact-section .contact-us {
-  width: 30%;
+  width: 100%;
   margin-bottom: 120px;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 992px) {
+  #contact .container .contact-section .contact-us {
+    width: 50%;
+  }
 }
 #contact .container .contact-section .contact-us h1 {
   margin-top: 30px;
 }
 #contact .container .contact-section .contact-us .contact-box {
   display: flex;
-  flex-direction: row;
-  margin-top: 40px;
+  flex-direction: column-reverse;
+  margin-top: 30px;
+}
+@media (min-width: 576px) {
+  #contact .container .contact-section .contact-us .contact-box {
+    flex-direction: row;
+    margin-top: 40px;
+  }
 }
 #contact .container .contact-section .contact-us .contact-box .list-icon {
   height: 60px;
   width: 60px;
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   color: #6366F1;
@@ -1644,9 +1663,20 @@ header .container .btn-mobile {
   border-radius: 50%;
   border: none;
   font-size: 25px;
+  margin-top: 10px;
+}
+@media (min-width: 576px) {
+  #contact .container .contact-section .contact-us .contact-box .list-icon {
+    margin-top: 0;
+  }
 }
 #contact .container .contact-section .contact-us .contact-box .list-info {
-  padding-left: 30px;
+  padding-left: 0px;
+}
+@media (min-width: 576px) {
+  #contact .container .contact-section .contact-us .contact-box .list-info {
+    padding-left: 30px;
+  }
 }
 #contact .container .contact-section .contact-us .contact-box .list-info a {
   font-weight: 600;
@@ -1654,13 +1684,31 @@ header .container .btn-mobile {
 #contact .container .contact-section .contact-us .contact-box .list-info a i {
   padding-left: 10px;
 }
-#contact .container .contact-section .contact-form {
-  position: absolute;
-  right: 20%;
+@media (min-width: 992px) {
+  #contact .container .contact-section .contact-form {
+    position: absolute;
+    right: 5%;
+  }
+}
+@media (min-width: 1200px) {
+  #contact .container .contact-section .contact-form {
+    position: absolute;
+    right: 10%;
+  }
+}
+@media (min-width: 1400px) {
+  #contact .container .contact-section .contact-form {
+    right: 15%;
+  }
 }
 #contact .container .contact-section .contact-form .content {
-  padding: 50px 80px;
+  padding: 30px 10px;
   background-color: #FFFFFF;
+}
+@media (min-width: 576px) {
+  #contact .container .contact-section .contact-form .content {
+    padding: 50px 80px;
+  }
 }
 #contact .container .contact-section .contact-form .content .input-group {
   padding-top: 20px;
