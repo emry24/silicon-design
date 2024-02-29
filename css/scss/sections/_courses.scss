@@ -142,7 +142,6 @@
                     .card-info {
 
                         display: flex;
-
                         gap: 20px;
 
 
@@ -152,6 +151,10 @@
                             gap: 5px;
                             color: $gray-600;
                             padding-top: 5px;
+                            
+                            p {
+                                margin-bottom: 0;
+                            }
                         }
                     }
 

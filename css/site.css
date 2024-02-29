@@ -7,7 +7,7 @@ html, body {
   font-size: 16px;
 }
 
-img {
+img, svg {
   max-width: 100%;
 }
 
@@ -739,34 +739,101 @@ header .container .btn-mobile {
   width: 200px;
 }
 
-#app-section {
+.our-app {
+  padding: 5rem 0;
   background-color: #F3F6FF;
-  display: flex;
-  flex-direction: column;
 }
-#app-section .container {
+.our-app .container {
   display: flex;
   flex-direction: column;
-  gap: 50px;
-  margin-top: 60px;
-  margin-bottom: 60px;
+  align-items: center;
+  gap: 40px;
 }
 @media (min-width: 992px) {
-  #app-section .container {
+  .our-app .container {
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 0px;
+  }
+}
+.our-app .container .phones {
+  max-width: 60%;
+  align-self: center;
+}
+.our-app .container .content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 1rem;
+}
+@media (min-width: 576px) {
+  .our-app .container .content {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+@media (min-width: 992px) {
+  .our-app .container .content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: space-between;
   }
 }
-#app-section .container .app-content .flex-box {
-  display: flex;
-  flex-direction: row;
-  padding-top: 60px;
-  gap: 50px;
-  align-items: end;
+.our-app .container .content h1 {
+  line-height: 160%;
+  font-weight: 400;
+  color: #565973;
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  color: #0B0F19;
+  font-size: 32px !important;
+  width: 100%;
+  padding: 0.5rem 0;
+  text-align: center;
+  text-wrap: pretty;
 }
-#app-section .container .app-content .flex-box p {
+@media (min-width: 992px) {
+  .our-app .container .content h1 {
+    line-height: 160%;
+    font-weight: 400;
+    color: #565973;
+    font-family: "Manrope", sans-serif;
+    font-weight: 800;
+    color: #0B0F19;
+    font-size: 40px !important;
+    text-align: start;
+  }
+}
+.our-app .container .content .app {
+  display: grid;
+  grid-template-columns: 2fr;
+  align-items: end;
+  padding: 1rem 0;
+}
+.our-app .container .content .app .rating {
   margin: 0;
+}
+@media (min-width: 576px) {
+  .our-app .container .content .app {
+    grid-template-columns: 2fr;
+  }
+}
+@media (min-width: 768px) {
+  .our-app .container .content .app {
+    grid-template-columns: 2fr;
+  }
+}
+@media (min-width: 992px) {
+  .our-app .container .content .app {
+    grid-template-columns: 2fr auto;
+  }
+}
+.our-app .container .content .app .app-img {
+  padding-top: 1rem;
 }
 
 #work-tools {
@@ -787,11 +854,26 @@ header .container .btn-mobile {
   }
 }
 #work-tools .container .grid-box {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(8, 1fr);
   padding-top: 60px;
   gap: 2rem;
+  padding: 30px;
+}
+@media (min-width: 576px) {
+  #work-tools .container .grid-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    padding-top: 60px;
+    gap: 2rem;
+    padding: 0px;
+  }
+}
+@media (min-width: 768px) {
+  #work-tools .container .grid-box {
+    padding-top: 40px;
+  }
 }
 @media (min-width: 992px) {
   #work-tools .container .grid-box {
@@ -802,8 +884,21 @@ header .container .btn-mobile {
     gap: 5rem;
   }
 }
-#work-tools .container .grid-box img {
+#work-tools .container .grid-box .grid-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+@media (min-width: 576px) {
+  #work-tools .container .grid-box .grid-item {
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+#work-tools .container .grid-box .grid-item img {
   padding-bottom: 20px;
+  max-width: 20%;
 }
 
 #subscribe {
@@ -1035,6 +1130,9 @@ header .container .btn-mobile {
   color: #9397AD;
   padding-top: 5px;
 }
+.courses .container .courses-grid .course-card .card-text .card-info i p {
+  margin-bottom: 0;
+}
 .courses .container .courses-grid .course-card .card-text:hover {
   text-decoration: none;
 }
@@ -1236,6 +1334,9 @@ header .container .btn-mobile {
 #course-showcase {
   position: relative;
   overflow: hidden;
+}
+#course-showcase span {
+  color: #B4B7C9;
 }
 #course-showcase .background-image {
   position: absolute;

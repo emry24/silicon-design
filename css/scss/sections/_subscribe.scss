@@ -3,7 +3,6 @@
     margin-top: 80px;
 
     .container {
-        // padding: 60px;
         position: relative;
         
         @include lg {
@@ -89,8 +88,7 @@
 
                 @include lg {
                     margin-right: 10px;
-                }
-                
+                }    
             }
         }
 
