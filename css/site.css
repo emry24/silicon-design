@@ -980,18 +980,29 @@ header .container .btn-mobile {
     gap: 0px;
   }
 }
-#subscribe .container .subscribe-here input {
+#subscribe .container .subscribe-here .email-wrapper {
+  position: relative;
+  display: flex;
+  flex: 1;
+}
+#subscribe .container .subscribe-here .fa-envelope {
+  position: absolute;
+  color: #9397AD;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#subscribe .container .subscribe-here input[type=text] {
   flex: 1;
   margin-bottom: 0px;
   border: 1px solid #B4B7C9;
-  color: #B4B7C9;
-  padding: 5px 20px;
+  padding: 5px 40px;
   font-weight: 600;
   font-size: 16px;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 @media (min-width: 992px) {
-  #subscribe .container .subscribe-here input {
+  #subscribe .container .subscribe-here input[type=text] {
     margin-right: 10px;
   }
 }
